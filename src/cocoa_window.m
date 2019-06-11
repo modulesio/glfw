@@ -896,7 +896,7 @@ int _glfwPlatformCreateWindow(_GLFWwindow* window,
 
     if (!_glfw.ns.finishedLaunching)
     {
-        [NSApp run];
+        // [NSApp run]; // crashes on MacOS; see https://github.com/exokitxr/exokit/issues/1192
         _glfw.ns.finishedLaunching = GLFW_TRUE;
     }
 
